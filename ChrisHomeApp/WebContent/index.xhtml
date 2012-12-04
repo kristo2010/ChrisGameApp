@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+<h:head></h:head>
+
+<h:body>
+	<h:form>
+
+		<p>Podaj liczbe od 0 do 100.</p>
+		<h:inputText id="ageId" value="#{helloBean.userNumber}"
+			style="width: 284px; ">
+			<f:validateLongRange minimum="#{helloBean.min}"
+				maximum="#{helloBean.max}">
+			</f:validateLongRange>
+		</h:inputText>
+
+		<h:commandButton value="Submit" action="#{helloBean.checkGuess}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
